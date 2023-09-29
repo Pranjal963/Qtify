@@ -15,7 +15,9 @@ const Controls = ({ data, hideRightArrow }) => {
 
   return <></>;
 };
-
+/*
+commented here
+*/
 const Carousel = ({ data, renderCardComponent }) => {
   const [hideRightArrow, setHideRightArrow] = useState(false);
 
