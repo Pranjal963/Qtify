@@ -2,7 +2,7 @@ import React from 'react'
 
 import styling from './NavBar.module.css'
 import Button from '../Button/Button';
-import Search from '../Search/Search';
+import Search from '../Search/SearchBar';
 import Logo from '../Logo/Logo';
 
 
