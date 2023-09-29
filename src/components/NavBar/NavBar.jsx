@@ -1,20 +1,22 @@
-import React from 'react'
+import React from "react";
+import Button from "../Button/Button";
+import Logo from "../Logo/Logo";
+import styles from "./NavBar.module.css";
+import SearchBar from "../Search/SearchBar";
 
-import styling from './NavBar.module.css'
-import Button from '../Button/Button';
-import Search from '../Search/SearchBar';
-import Logo from '../Logo/Logo';
-
-
-const NavBar = () => {
+const Navbar = ({ newSongs, generateSongs }) => {
   return (
-    <nav className={styling.navbar}>
-        <Logo />
-        <Search />
-        <Button children="Give Feedback"/>
-       
-    </nav> 
-  )
-}
+    <nav className={styles.navbar}>
+      <Logo />
+      <SearchBar
+        placeholder="Search songs..."
+        data={newSongs.map((song) => song.title)}
+        onSearch={generateSongs}
+      />
+      {/* <SearchBar placeholder="Search a album of your choice" /> */}
+      <Button children="Give FeedBack" />
+    </nav>
+  );
+};
 
-export default NavBar
+export default Navbar;
